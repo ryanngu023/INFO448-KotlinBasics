@@ -38,8 +38,8 @@ fun mathOp(lhs: Int, rhs: Int, op: (Int, Int) -> Int): Int {
 }
 
 // write a class "Person" with first name, last name and age
-class Person(var firstname: String, var lastname: String, var age: Int) {
-    val debugString: String = "[Person firstName:$firstname lastName:$lastname age:$age]"
+class Person(var firstName: String, var lastName: String, var age: Int) {
+    val debugString: String = "[Person firstName:$firstName lastName:$lastName age:$age]"
 }
 // write a class "Money"
 class Money(var amount: Int, var currency: String) {
@@ -67,7 +67,7 @@ class Money(var amount: Int, var currency: String) {
                 "CAN" -> 1.25
                 else -> 1.0
             }
-            val usdAmount = amount * usdConversion
+            val usdAmount = this.amount / usdConversion
             val conversionRate = when (other) {
                 "USD" -> 1.0
                 "GBP" -> 0.5
